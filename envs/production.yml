@@ -1,0 +1,16 @@
+---
+app:
+    protocol: http
+    hostname: ~
+    port: ~
+    debug: false
+
+database:
+    client:
+        type: mongodb
+        timeZone: UTC
+    connection: {}
+    options: {}
+logger:
+    log_level: 'debug'
+    morgan_format: dev

@@ -1,0 +1,35 @@
+{
+    "name": "owlfinity-api",
+    "version": "1.0.0",
+    "description": "Sample API for U-CRM",
+    "main": "config/app.js",
+    "scripts": {
+        "lint": "eslint --cache --fix --cache-location temp .",
+        "serve:dev": "NODE_ENV=development NODE_CONFIG_DIR=envs nodemon ./bin/www --inspect=9223 --ext js,yml",
+        "serve:prod": "NODE_ENV=production NODE_CONFIG_DIR=envs node .",
+        "start": "npm run lint && npm run serve:dev"
+    },
+    "author": "Norayr Ghukasyan",
+    "license": "ISC",
+    "dependencies": {
+        "app-root-path": "^3.0.0",
+        "body-parser": "^1.19.0",
+        "compression": "^1.7.4",
+        "config": "^3.2.5",
+        "express": "^4.17.1",
+        "express-validator": "^6.4.0",
+        "helmet": "^3.21.2",
+        "http-errors": "^1.7.3",
+        "http-status-codes": "^1.4.0",
+        "js-yaml": "^3.13.1",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.8.12",
+        "morgan": "^1.9.1",
+        "passport": "^0.4.1",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "nodemon": "^2.0.2"
+    }
+}
