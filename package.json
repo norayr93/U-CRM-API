@@ -5,7 +5,7 @@
     "main": "config/app.js",
     "scripts": {
         "lint": "eslint --cache --fix --cache-location temp .",
-        "serve:dev": "NODE_ENV=development NODE_CONFIG_DIR=envs nodemon ./bin/www --inspect=9223 --ext js,yml",
+        "serve:dev": "NODE_ENV=development NODE_CONFIG_DIR=envs nodemon  --inspect ./bin/www --ext js,yml",
         "serve:prod": "NODE_ENV=production NODE_CONFIG_DIR=envs node .",
         "start": "npm run lint && npm run serve:dev"
     },
@@ -13,9 +13,12 @@
     "license": "ISC",
     "dependencies": {
         "app-root-path": "^3.0.0",
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "compression": "^1.7.4",
         "config": "^3.2.5",
+        "cookie-session": "^1.4.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "express-validator": "^6.4.0",
         "helmet": "^3.21.2",
@@ -26,6 +29,11 @@
         "mongoose": "^5.8.12",
         "morgan": "^1.9.1",
         "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "shortid": "^2.2.15",
+        "swagger-jsdoc": "^3.5.0",
+        "swagger-ui-express": "^4.1.3",
+        "validator": "^12.2.0",
         "winston": "^3.2.1"
     },
     "devDependencies": {

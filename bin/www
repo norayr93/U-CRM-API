@@ -55,11 +55,11 @@ const onError = error => {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
+const onListening = (prop) => {
     logger.info(`Listening on ${protocol}://${hostname}:${port}`, 'app');
-}
+};
 
-const normalizedPort = normalizePort(process.env.PORT || '8000');
+const normalizedPort = normalizePort(process.env.PORT || '5000');
 
 app.set('protocol', protocol);
 app.set('host', hostname);
