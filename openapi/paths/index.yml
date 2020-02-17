@@ -1,0 +1,4 @@
+/students:
+  $ref: '#/students/students.yml'
+
+

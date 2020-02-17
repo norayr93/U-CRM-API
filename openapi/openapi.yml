@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  description: test
+  version: 3.0.0
+  title: U-CRM api documentation
+  termsOfService: http://swagger.io/terms/
+servers:
+  - url: 'https://localhost:5000'
+    description: Local server
+basePath: /
+tags:
+- name: U-CRM
+  description: CRM for university
+paths:
+  $ref: '#/paths/index.yml'
+

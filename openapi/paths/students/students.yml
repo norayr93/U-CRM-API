@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Students
+  summary: Get all students list
+  parameters:
+    - $ref: '#/components/parameters/Student'
+
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                $ref: '#/components/schemas/Student'

@@ -14,23 +14,6 @@ const router = Router();
  *   description: Student management
  */
 
-// Routes
-/**
- * @swagger
- * /students:
- *  get:
- *    tags: [Students]
- *    description: get all students
- *    responses:
- *      '200':
- *        description: A successful response
- *        content:
- *            application/json:
- *              schema:
- *                type: array
- *                items:
- *                  $ref: '#/components/schemas/Student'
- */
 router.get('/', async (req, res, next) => {
     try {
         const query = req.query || {};
@@ -71,28 +54,6 @@ router.get('/:id', [param('id').exists()], async (req, res, next) => {
     }
 });
 
-/**
- * @swagger
- *  /students:
- *    post:
- *      summary: Create a new student
- *      tags: [Students]
- *      requestBody:
- *        required: true
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *              $ref: '#/components/schemas/Student'
- *      responses:
- *        "200":
- *          description: A student schema
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                $ref: '#/components/schemas/Student'
- */
 router.post('/', [
     body('name').exists().withMessage('name is required'),
     body('lastname').exists().withMessage('lastname is required'),

@@ -1,0 +1,42 @@
+name:
+  name: name
+  in: body
+  required: true
+  description: Student name
+  schema:
+    type: string
+lastname:
+  name: lastname
+  in: body
+  required: true
+  description: Student lastname
+  schema:
+    type: string
+faculty:
+  name: faculty
+  in: body
+  required: true
+  description: Student's faculty
+  schema:
+    type: string
+group:
+  name: group
+  in: body
+  required: true
+  description: Student's group
+  schema:
+    type: string
+email:
+  name: email
+  in: body
+  required: true
+  description: Student's email
+  schema:
+    type: string
+phone:
+  name: phone
+  in: body
+  required: true
+  description: Student's phone number
+  schema:
+    type: integer

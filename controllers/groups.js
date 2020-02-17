@@ -6,17 +6,6 @@ const mongoose = require('mongoose');
 const Group = mongoose.model('Group');
 const router = Router();
 
-// Routes
-/**
- * @swagger
- * /groups:
- *  get:
- *    tags: [Students]
- *    description: get all students
- *    responses:
- *      '200':
- *        description: A successful response
- */
 router.get('/', async (req, res, next) => {
     try {
         const groups = await Group.find();

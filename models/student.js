@@ -46,34 +46,3 @@ const Student = mongoose => {
 };
 
 module.exports = Student;
-
-/**
- * @swagger
- *  components:
- *    schemas:
- *      Student:
- *        type: object
- *        required:
- *          - name
- *          - lastname
- *          - email
- *          - phone
- *          - faculty
- *          - group
- *        properties:
- *          name:
- *            type: string
- *          lastname:
- *            type: string
- *          faculty:
- *            type: string
- *          group:
- *            type: string
- *          email:
- *            type: string
- *            format: email
- *            description: Email for the user, needs to be unique.
- *          phone:
- *            type: integer
- *            format: int64
- */
